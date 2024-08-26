@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Specify permissions needed for the app -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- If you want vibration for notifications -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CollegeNexus"
+        tools:targetApi="31">
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Admin Dashboard Activity -->
+        <activity
+            android:name=".AdminDashboard"
+            android:exported="false" />
+
+        <!-- Events List for Students -->
+        <activity
+            android:name=".EventsListStudent"
+            android:exported="false" />
+
+        <!-- Events List for Admin -->
+        <activity
+            android:name=".EventsListAdmin"
+            android:exported="false" />
+
+        <!-- Add Event Activity -->
+        <activity
+            android:name=".AddEvent"
+            android:exported="false" />
+
+        <!-- Admin Portal Activity -->
+        <activity
+            android:name=".AdminPortalActivity"
+            android:exported="false" />
+
+        <!-- Portal Activity as the launcher activity -->
+        <activity
+            android:name=".PortalActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CollegeNexus.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity for other purposes -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CollegeNexus.NoActionBar" />
+
+    </application>
+
+</manifest>

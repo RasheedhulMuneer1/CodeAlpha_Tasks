@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "777021838111",
+    "project_id": "collegenexus-db75d",
+    "storage_bucket": "collegenexus-db75d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777021838111:android:e16b316b7c0bc6ecfd562a",
+        "android_client_info": {
+          "package_name": "com.example.collegenexus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASIf-eQNSEUTKzuRtm2dSxSrFW3tg9fyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
